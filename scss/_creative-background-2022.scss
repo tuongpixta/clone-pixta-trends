@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.creative-background-2022 {
+  position: relative;
+  padding: 60px 0;
+  border-bottom: 1px solid $color-outline;
+
+  &--theme {
+    background-color: $color-back-theme;
+  }
+
+  &--expression {
+    background-color: $color-back-expression;
+  }
+
+  &--comments {
+    padding-top: 200px;
+    background-color: $color-back-comments;
+    @include maxq(md) {
+      padding-top: 40px;
+    }
+  }
+
+  &__sticker {
+    position: absolute;
+    @include maxq(md) {
+      display: none;
+    }
+
+    &--first {
+      left: 900px;
+      width: 220px;
+    }
+
+    &--second {
+      top: 470px;
+      left: -50px;
+      width: 380px;
+    }
+
+    &--last {
+      top: 1350px;
+      left: -50px;
+      width: 500px;
+    }
+  }
+}

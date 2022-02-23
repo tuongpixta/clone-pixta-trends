@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+.creative-mainvisual-2022 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 530px;
+  background: {
+    image: url(../img/bg/main-visual.jpg);
+    repeat: no-repeat;
+    size: cover;
+  }
+
+  &__title-wrap {
+    display: flex;
+    box-shadow: 20px 20px $color-outline;
+    @include maxq(md) {
+      box-shadow: 10px 10px $color-outline;
+    }
+  }
+
+  &__main-title {
+    padding: 24px 140px 20px 30px;
+    @include font-size(44);
+    font-family: "Copperplate Gothic", "Copperplate", "fantasy", sans-serif;
+    background-color: $color-base;
+    border: 2px solid $color-outline;
+    @include maxq(md) {
+      padding: 10px 20px 10px 10px;
+      @include font-size(20);
+      border: 1px solid $color-outline;
+    }
+
+    &::after {
+      content: "|";
+      animation: typinganime 0.9s ease infinite;
+    }
+
+    span {
+      display: none;
+    }
+    @keyframes typinganime {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  i {
+    padding: 30px;
+    margin-left: -2px;
+    @include font-size(44);
+    color: $color-search-icon;
+    background-color: $color-accent-title;
+    border: 2px solid $color-outline;
+    @include maxq(md) {
+      padding: 14px;
+      @include font-size(26);
+      border: 1px solid $color-outline;
+    }
+  }
+}

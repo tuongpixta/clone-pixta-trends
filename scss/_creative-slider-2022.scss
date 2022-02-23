@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.creative-slider-2022 {
+  padding-bottom: 20px;
+  @include maxq(md) {
+    padding-bottom: 0;
+  }
+
+  img {
+    width: 600px;
+    border-bottom: 1px solid $color-outline;
+    @include maxq(md) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+$breakpoints: (
+  sm: 420px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1600px,
+);
+
+// font-size
+@mixin font-size($size: 24, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / 10) * 1rem;
+}
+
+// clearfix
+@mixin clearfix {
+  &::after {
+    clear: both;
+    display: block;
+    content: "";
+  }
+}
+
+// media queries
+@mixin maxq($breakpoint: lg) {
+  @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+@mixin minq($breakpoint: lg) {
+  @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}

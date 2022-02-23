@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.creative-text-content-2022 {
+  margin-top: 250px;
+  margin-bottom: 80px;
+  width: 50%;
+  @include maxq(md) {
+    width: 100%;
+    margin-top: 400px;
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: -70px;
+    margin-left: 160px;
+    padding: 20px 30px;
+    color: $color-text;
+    font-weight: bold;
+    background-color: $color-base;
+    @include font-size(26);
+    border: 1px solid $color-outline;
+    @include maxq(md) {
+      margin-left: 10%;
+      @include font-size(22);
+    }
+  }
+
+  &__text {
+    padding: 80px 50px 50px 140px;
+    color: $color-text;
+    @include font-size(16);
+    line-height: 1.8;
+    background-color: $color-base;
+    border: 1px solid $color-outline;
+    @include maxq(md) {
+      padding: 80px 40px 40px;
+    }
+
+    &--theme {
+      box-shadow: 20px 20px $color-shadow-theme, 21px 21px $color-outline,
+        21px 19px $color-outline, 19px 21px $color-outline;
+      @include maxq(md) {
+        box-shadow: 10px 10px $color-shadow-theme, 11px 11px $color-outline,
+          11px 9px $color-outline, 9px 11px $color-outline;
+      }
+    }
+
+    &--expression {
+      box-shadow: 20px 20px $color-shadow-expression, 21px 21px $color-outline,
+        21px 19px $color-outline, 19px 21px $color-outline;
+      @include maxq(md) {
+        box-shadow: 10px 10px $color-shadow-expression, 11px 11px $color-outline,
+          11px 9px $color-outline, 9px 11px $color-outline;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+//--------------------------------------------------------------------------------
+// 2022  shared_contents into module and components
+//--------------------------------------------------------------------------------
+
+@import "./mixin.scss";
+@import "./_creative-variables-2022.scss";
+@import "./_creative-header-2022.scss";
+@import "./_creative-mainvisual-2022.scss";
+@import "./_creative-lead-2022.scss";
+@import "./_creative-layout-2022.scss";
+@import "./_creative-background-2022.scss";
+@import "./_creative-contents-wrap-2022.scss";
+@import "./_creative-images-content-2022.scss";
+@import "./_creative-text-content-2022.scss";
+@import "./_creative-search-content-2022.scss";
+@import "./_creative-contents-more-2022.scss";
+@import "./_creative-slider-2022.scss";
+@import "./_creative-pixta-comment-2022.scss";
+@import "./_creative-guest-comment-2022.scss";
+@import "./_creative-guest-profile-2022.scss";
+@import "./creative-event-2022";
+@import "./creative-event-info-2022";
+@import "./creative-event-button-2022";
+@import "./creative-copy-right-2022";

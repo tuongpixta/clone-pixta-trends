@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+//--------------------------------------------------------------------------------
+// slick ライブラリの使用
+//--------------------------------------------------------------------------------
+
+$slick-font-path: "../plugins/slick/fonts" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "../plugins/slick/" !default;
+$slick-arrow-color: #131313 !default;
+@import "../public/plugins/slick/slick.scss";
+@import "../public/plugins/slick/slick-theme.scss";
+
+.slick-prev::before,
+.slick-next::before {
+  font-family: FontAwesome;
+  font-size: 25px;
+  opacity: 1;
+}
+
+.slick-prev::before {
+  content: "\f104";
+}
+
+.slick-next::before {
+  content: "\f105";
+}
+
+.slick-prev,
+.slick-next {
+  top: 100%;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #131313;
+  background-color: #f58163;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #707cb3;
+    transition: 0.5s;
+  }
+}
+
+#expression > ul > button.slick-next.slick-arrow,
+#expression > ul > button.slick-prev.slick-arrow {
+  background-color: #f4db67;
+
+  &:hover {
+    background-color: #009b65;
+  }
+}
+
+.slick-prev {
+  left: 40%;
+}
+
+.slick-next {
+  right: 40%;
+}
+
+.slick-list {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trends</title>
+    <link rel="stylesheet" href="./public/css/reset.min.css" />
+    <link rel="stylesheet" href="./public/css/slick.css" />
+    <link rel="stylesheet" href="./public/css/myscss.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="./public/plugins/jquery/jquery.min.js"></script>
+    <script src="./public/plugins/slick/slick.min.js"></script>
+    <script src="./public/plugins/fontawesome/fontawesome.min.js"></script>
+    <script src="./public/js/index.js"></script>
+  </head>
+  <body>
+    <div class="creative-header-2022">
+      <section class="creative-header-2022__wrap">
+        <h1 class="creative-header-2022__logo">
+          <img
+            class="global-header__logo"
+            src="./public/img/logo/logo-blk.svg"
+            alt=""
+            width="125"
+          />
+        </h1>
+        <ul class="creative-header-2022__share-links-sp">
+          <li
+            class="fb-share-button"
+            data-href="https://pixta.jp/creative-trend/2022"
+          >
+            <a
+              class="creative-header-2022__sns-link-sp fb-xfbml-parse-ignore"
+              href="http://www.facebook.com/share.php?u=https://pixta.jp/creative-trend/2022"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="creative-header-2022__sns-link-sp creative-header-2022__sns-link-sp--twitter"
+              href="https://twitter.com/share?url=https://pixta.jp/creative-trend/2022&text=2022年のクリエイティブトレンドPIXTA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+          </li>
+        </ul>
+        <script>
+          $(function () {
+            $(".js-btn").on("click", function () {
+              // js-btnクラスをクリックすると、
+              $(".creative-header-2022__menu-btn-line").toggleClass("open"); // バーガーの線にopenクラスをつけ外しする
+            });
+          });
+          $(function () {
+            $(".js-btn").on("click", function () {
+              // js-btnクラスをクリックすると、
+              $(".creative-header-2022__menu").toggleClass("opening"); // メニューにopeningクラスをつけ外しする
+            });
+          });
+        </script>
+        <button class="creative-header-2022__menu-btn js-btn" type="button">
+          <span class="creative-header-2022__menu-btn-line"></span>
+        </button>
+        <ul class="creative-header-2022__menu">
+          <li class="creative-header-2022__pulldown">
+            <a class="creative-header-2022__pulldown-btn" href="#theme"
+              >テーマトレンド</a
+            >
+            <ul class="creative-header-2022__pulldown-list">
+              <li>
+                <a href="#empathy">わたし、だけじゃない</a>
+              </li>
+              <li>
+                <a href="#stimulus">自粛からの反動</a>
+              </li>
+              <li>
+                <a href="#fluctuating-values">価値観のゆらぎ</a>
+              </li>
+              <li>
+                <a href="#anyone-creator">誰もがクリエイターになれる世界</a>
+              </li>
+            </ul>
+          </li>
+          <li class="creative-header-2022__pulldown">
+            <a class="creative-header-2022__pulldown-btn" href="#expression"
+              >表現トレンド</a
+            >
+            <ul class="creative-header-2022__pulldown-list">
+              <li>
+                <a href="#manga-animation">漫画とアニメ</a>
+              </li>
+              <li>
+                <a href="#impact">インパクト勝負</a>
+              </li>
+              <li>
+                <a href="#line">線を活かす</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#comment">コメント</a>
+          </li>
+          <li>
+            <a href="#event">イベント</a>
+          </li>
+        </ul>
+      </section>
+      <ul class="creative-header-2022__share-links">
+        <li
+          class="fb-share-button"
+          data-href="https://pixta.jp/creative-trend/2022"
+        >
+          <a
+            class="creative-header-2022__sns-link fb-xfbml-parse-ignore"
+            href="http://www.facebook.com/share.php?u=https://pixta.jp/creative-trend/2022"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            class="creative-header-2022__sns-link creative-header-2022__sns-link--twitter"
+            href="https://twitter.com/share?url=https://pixta.jp/creative-trend/2022&text=2022年のクリエイティブトレンドPIXTA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
+        </li>
+      </ul>
+    </div>
+    <script>
+      function TextTypingAnime() {
+        $(".creative-mainvisual-2022__main-title").each(function () {
+          var elemPos = $(this).offset().top - 50;
+          var scroll = $(window).scrollTop();
+          var windowHeight = $(window).height();
+          var thisChild = "";
+          if (scroll >= elemPos - windowHeight) {
+            thisChild = $(this).children();
+            thisChild.each(function (i) {
+              var time = 200;
+              $(this)
+                .delay(time * i)
+                .fadeIn(time);
+            });
+          } else {
+            thisChild = $(this).children();
+            thisChild.each(function () {
+              $(this).stop();
+              $(this).css("display", "none"); //spanタグ非表示
+            });
+          }
+        });
+      }
+      // 画面が読み込まれたらすぐに動かしたい場合の記述
+      $(window).on("load", function () {
+        var element = $(".creative-mainvisual-2022__main-title");
+        element.each(function () {
+          var text = $(this).html();
+          var textbox = "";
+          text.split("").forEach(function (t) {
+            if (t !== " ") {
+              textbox += "<span>" + t + "</span>";
+            } else {
+              textbox += t;
+            }
+          });
+          $(this).html(textbox);
+        });
+
+        TextTypingAnime(); /* アニメーション用の関数を呼ぶ*/
+      }); // Key event hook
+
+      function keydownTrigger(event) {
+        // console.info(event)
+        if (event.ctrlKey || event.metaKey) {
+          return;
+        }
+        if (event.key === "Backspace") {
+          var elem = document.getElementsByClassName(
+            "creative-mainvisual-2022__main-title",
+          )[0];
+          var child = elem.children[elem.children.length - 1];
+          if (child) {
+            child.remove();
+          }
+        } else if (
+          event.key <= " " ||
+          (event.key >= "a" && event.key <= "z") ||
+          (event.key >= "0" && event.key <= "9")
+        ) {
+          var elem = document.getElementsByClassName(
+            "creative-mainvisual-2022__main-title",
+          )[0];
+          var size = elem.children.length;
+          var targetText = "CREATIVE TREND 2022 ";
+          if (size < targetText.length) {
+            var newChar = document.createElement("span");
+            newChar.innerHTML = targetText.charAt(elem.children.length);
+            newChar.style.cssText = "display: inline;";
+            elem.appendChild(newChar);
+            if (event.key <= " ") {
+              event.preventDefault(); // Supress scroll event
+            }
+          }
+        }
+      }
+      document.addEventListener("keydown", keydownTrigger);
+    </script>
+    <div class="creative-mainvisual-2022">
+      <section class="creative-mainvisual-2022__title-wrap">
+        <h1 class="creative-mainvisual-2022__main-title">
+          CREATIVE TREND 2022
+        </h1>
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </section>
+    </div>
+    <div class="creative-lead-2022">
+      <div id="theme"></div>
+      <div id="empathy"></div>
+      <div class="creative-lead-2022__wrap">
+        <p class="creative-lead-2022__text">
+          あらゆるものがビジュアライズ化され、人々はクリエイティブによって表現された世界の中で生きています。PIXTAでは、様々なクリエイティブ表現を担う写真・イラストを分析し、2022年のクリエイティブトレンドを考察。検索キーワードの変化、ダウンロード素材の傾向、社会背景を様々な観点から分析し、これからの表現とテーマを考察しました。
+        </p>
+      </div>
+    </div>
+
+    <div class="creative-background-2022 creative-background-2022--theme">
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--first"
+      >
+        <img src="public/img/theme/sticker-1.svg" alt="" />
+      </div>
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--second"
+      >
+        <img src="public/img/theme/sticker-2.svg" alt="" />
+      </div>
+      <div class="creative-layout-2022">
+        <script>
+          $(function () {
+            $(window).on("scroll resize", function () {
+              var setHeight = 100;
+              var wHeight = $(window).height();
+              $(".creative-contents-wrap-2022__content").each(function () {
+                var scrollTop = $(window).scrollTop();
+                var targetPosition = $(this).offset().top;
+                if (scrollTop > targetPosition - wHeight + setHeight) {
+                  $(this).addClass("show");
+                }
+              });
+            });
+          });
+        </script>
+        <div class="creative-contents-wrap-2022">
+          <div
+            class="creative-images-content-2022 creative-images-content-2022--theme creative-contents-wrap-2022__content"
+          >
+            <p class="creative-images-content-2022__sub-title">
+              わたし、だけじゃない
+            </p>
+            <ul class="creative-slider-2022">
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="public/img/empathy/empathy-1.jpg"
+                  alt="わたし、だけじゃないの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="public/img/empathy/empathy-2.jpg"
+                  alt="わたし、だけじゃないの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="public/img/empathy/empathy-3.jpg"
+                  alt="わたし、だけじゃないの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="public/img/empathy/empathy-4.jpg"
+                  alt="わたし、だけじゃないの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="public/img/empathy/empathy-5.jpg"
+                  alt="わたし、だけじゃないの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="public/img/empathy/empathy-6.jpg"
+                  alt="わたし、だけじゃないの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="public/img/empathy/empathy-7.jpg"
+                  alt="わたし、だけじゃないの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="public/img/empathy/empathy-8.jpg"
+                  alt="わたし、だけじゃないの素材"
+                />
+              </li>
+            </ul>
+          </div>
+          <section
+            class="creative-text-content-2022 creative-contents-wrap-2022__content"
+          >
+            <h2 class="creative-text-content-2022__title">
+              わたし、だけじゃない
+            </h2>
+            <p
+              class="creative-text-content-2022__text creative-text-content-2022__text--theme"
+            >
+              コロナ禍で人々は会えない時間を過ごし、孤独を楽しみ、そして孤独を想う時間を過ごしてきました。<br />
+              人は誰かと分かち合いたい、つながりたい。小さな不安も、チラリとのぞく照れ隠しも、心を揺らすさざ波も「わかるよ」「わたしも」「素敵だね」を誰かと共有し合うだけで前を向ける。情緒的な心も、ダメな自分の一部も、誰かに肯定して欲しいのかもしれません。だからこそ、ビジュアルはよりエモーショナルなものを、あるいは、より共感しやすいリアルさが求められています。
+            </p>
+          </section>
+          <div
+            class="creative-search-content-2022 creative-search-content-2022--theme creative-contents-wrap-2022__content"
+          >
+            <div class="creative-search-content-2022__sub-title-wrap">
+              <p class="creative-search-content-2022__sub-title-text">
+                「わたし、だけじゃない」に関連する 検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「わたし、だけじゃない」に関連する 検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「わたし、だけじゃない」に関連する 検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「わたし、だけじゃない」に関連する 検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「わたし、だけじゃない」に関連する 検索キーワードの変化・
+              </p>
+            </div>
+            <ul class="creative-search-content-2022__contents">
+              <li>
+                <div class="creative-search-content-2022__items-wrap">
+                  <p class="creative-search-content-2022__item">のんびり</p>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <p class="creative-search-content-2022__date">
+                  検索頻度は約
+                  <span class="creative-search-content-2022__date-size">3</span>
+                  倍にUP !
+                </p>
+              </li>
+              <li>
+                <div class="creative-search-content-2022__items-wrap">
+                  <p class="creative-search-content-2022__item">微笑</p>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <p class="creative-search-content-2022__date">
+                  検索頻度は約
+                  <span class="creative-search-content-2022__date-size"
+                    >5.5</span
+                  >
+                  倍にUP !
+                </p>
+              </li>
+              <li>
+                <div class="creative-search-content-2022__items-wrap">
+                  <p class="creative-search-content-2022__item">エモい</p>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <p class="creative-search-content-2022__date">
+                  検索頻度は約
+                  <span class="creative-search-content-2022__date-size"
+                    >2.2</span
+                  >
+                  倍にUP !
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="creative-contents-more-2022">
+          <div class="creative-contents-more-2022__box">
+            <p class="creative-contents-more-2022__title">
+              「 わたし、だけじゃない 」の<br />
+              素材をもっと見ますか？
+            </p>
+
+            <p></p>
+            <div class="creative-contents-more-2022__button">
+              <a
+                class="creative-contents-more-2022__link-box"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p
+                  class="creative-contents-more-2022__link creative-contents-more-2022__link--theme"
+                >
+                  はい
+                </p></a
+              >
+            </div>
+          </div>
+          <div id="stimulus"></div>
+          <div class="creative-contents-more-2022__sticker">
+            <img src="./public/img/theme/sticker-3.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="creative-background-2022 creative-background-2022--theme">
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--first"
+      >
+        <img src="./public/img/theme/sticker-1.svg" alt="" />
+      </div>
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--second"
+      >
+        <img src="public/img/theme/sticker-2.svg" alt="" />
+      </div>
+      <div class="creative-layout-2022">
+        <script>
+          $(function () {
+            $(window).on("scroll resize", function () {
+              var setHeight = 100;
+              var wHeight = $(window).height();
+              $(".creative-contents-wrap-2022__content").each(function () {
+                var scrollTop = $(window).scrollTop();
+                var targetPosition = $(this).offset().top;
+                if (scrollTop > targetPosition - wHeight + setHeight) {
+                  $(this).addClass("show");
+                }
+              });
+            });
+          });
+        </script>
+        <div class="creative-contents-wrap-2022">
+          <div
+            class="creative-images-content-2022 creative-images-content-2022--theme creative-contents-wrap-2022__content"
+          >
+            <p class="creative-images-content-2022__sub-title">
+              自粛からの反動
+            </p>
+            <ul class="creative-slider-2022">
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/stimulus/stimulus-1.jpg"
+                  alt="自粛からの反動の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/stimulus/stimulus-2.jpg"
+                  alt="自粛からの反動の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/stimulus/stimulus-3.jpg"
+                  alt="自粛からの反動の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/stimulus/stimulus-4.jpg"
+                  alt="自粛からの反動の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/stimulus/stimulus-5.jpg"
+                  alt="自粛からの反動の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/stimulus/stimulus-6.jpg"
+                  alt="自粛からの反動の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/stimulus/stimulus-7.jpg"
+                  alt="自粛からの反動の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/stimulus/stimulus-8.jpg"
+                  alt="自粛からの反動の素材"
+                />
+              </li>
+            </ul>
+          </div>
+          <section
+            class="creative-text-content-2022 creative-contents-wrap-2022__content"
+          >
+            <h2 class="creative-text-content-2022__title">自粛からの反動</h2>
+            <p
+              class="creative-text-content-2022__text creative-text-content-2022__text--theme"
+            >
+              抑制された日常の中で心を動かしてくれるのは手の中、画面の中。いい加減、我慢は限界。
+              変化がほしい、刺激がほしい。良い子でいるのはもう飽きた。はっちゃけたい！
+              反動にも似た感情が、ビジュアルへのニーズにも表れてきています。<br />
+              違和感との出会い、挑発的なモノへの高揚、変化への期待、煌めく世界。<br />
+              コンマ一秒で人の視線を奪えるだけの、少しの棘や毒気を含んだ刺激的なビジュアルに期待が集まっています。
+            </p>
+          </section>
+          <div
+            class="creative-search-content-2022 creative-search-content-2022--theme creative-contents-wrap-2022__content"
+          >
+            <div class="creative-search-content-2022__sub-title-wrap">
+              <p class="creative-search-content-2022__sub-title-text">
+                「自粛からの反動」に関連する 検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「自粛からの反動」に関連する 検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「自粛からの反動」に関連する 検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「自粛からの反動」に関連する 検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「自粛からの反動」に関連する 検索キーワードの変化・
+              </p>
+            </div>
+            <ul class="creative-search-content-2022__contents">
+              <li>
+                <div class="creative-search-content-2022__items-wrap">
+                  <p class="creative-search-content-2022__item">キラキラ背景</p>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <p class="creative-search-content-2022__date">
+                  検索頻度は約
+                  <span class="creative-search-content-2022__date-size"
+                    >6.3</span
+                  >
+                  倍にUP !
+                </p>
+              </li>
+              <li>
+                <div class="creative-search-content-2022__items-wrap">
+                  <p class="creative-search-content-2022__item">カラーバック</p>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <p class="creative-search-content-2022__date">
+                  検索頻度は約
+                  <span class="creative-search-content-2022__date-size">2</span>
+                  倍にUP !
+                </p>
+              </li>
+              <li>
+                <div class="creative-search-content-2022__items-wrap">
+                  <p class="creative-search-content-2022__item">サイケ</p>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <p class="creative-search-content-2022__date">
+                  検索頻度は約
+                  <span class="creative-search-content-2022__date-size">2</span>
+                  倍にUP !
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="creative-contents-more-2022">
+          <div class="creative-contents-more-2022__box">
+            <p class="creative-contents-more-2022__title">
+              「 自粛からの反動 」の<br />
+              素材をもっと見ますか？
+            </p>
+
+            <p></p>
+            <div class="creative-contents-more-2022__button">
+              <a
+                class="creative-contents-more-2022__link-box"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p
+                  class="creative-contents-more-2022__link creative-contents-more-2022__link--theme"
+                >
+                  はい
+                </p>
+              </a>
+            </div>
+          </div>
+          <div id="fluctuating-values"></div>
+          <div class="creative-contents-more-2022__sticker">
+            <img src="./public/img/theme/sticker-3.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="creative-background-2022 creative-background-2022--theme">
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--first"
+      >
+        <img src="./public/img/theme/sticker-1.svg" alt="" />
+      </div>
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--second"
+      >
+        <img src="public/img/theme/sticker-2.svg" alt="" />
+      </div>
+      <div class="creative-layout-2022">
+        <script>
+          $(function () {
+            $(window).on("scroll resize", function () {
+              var setHeight = 100;
+              var wHeight = $(window).height();
+              $(".creative-contents-wrap-2022__content").each(function () {
+                var scrollTop = $(window).scrollTop();
+                var targetPosition = $(this).offset().top;
+                if (scrollTop > targetPosition - wHeight + setHeight) {
+                  $(this).addClass("show");
+                }
+              });
+            });
+          });
+        </script>
+        <div class="creative-contents-wrap-2022">
+          <div
+            class="creative-images-content-2022 creative-images-content-2022--theme creative-contents-wrap-2022__content"
+          >
+            <p class="creative-images-content-2022__sub-title">
+              価値観のゆらぎ
+            </p>
+            <ul class="creative-slider-2022">
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/fluctuating-values/fluctuating-values-1.jpg"
+                  alt="価値観のゆらぎの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/fluctuating-values/fluctuating-values-2.jpg"
+                  alt="価値観のゆらぎの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/fluctuating-values/fluctuating-values-3.jpg"
+                  alt="価値観のゆらぎの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/fluctuating-values/fluctuating-values-4.jpg"
+                  alt="価値観のゆらぎの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/fluctuating-values/fluctuating-values-5.jpg"
+                  alt="価値観のゆらぎの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/fluctuating-values/fluctuating-values-6.jpg"
+                  alt="価値観のゆらぎの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/fluctuating-values/fluctuating-values-7.jpg"
+                  alt="価値観のゆらぎの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/fluctuating-values/fluctuating-values-8.jpg"
+                  alt="価値観のゆらぎの素材"
+                />
+              </li>
+            </ul>
+          </div>
+          <section
+            class="creative-text-content-2022 creative-contents-wrap-2022__content"
+          >
+            <h2 class="creative-text-content-2022__title">価値観のゆらぎ</h2>
+            <p
+              class="creative-text-content-2022__text creative-text-content-2022__text--theme"
+            >
+              社会は今、価値観が揺らいでいます。かつて常識だったもの、当たり前だったこと、美徳とされていたものは過ぎ去り、新たな常識、新たな美徳へと移り変わってきました。同時に、人の数だけ、常識や美意識、正義があることを知りました。<br />
+              新たな価値観に馴染もうとする社会に、クリエイティブは追いついているでしょうか。
+              慣れたものを脱ぎ捨てるには、勇気とその先の未来を描く想像力が必要です。<br />
+              “人間が想像できることは、人間が実現できる”<br />
+              世界の描き手を、社会は待っています。
+            </p>
+          </section>
+          <div
+            class="creative-search-content-2022 creative-search-content-2022--theme creative-contents-wrap-2022__content"
+          >
+            <div class="creative-search-content-2022__sub-title-wrap">
+              <p class="creative-search-content-2022__sub-title-text">
+                「価値観のゆらぎ」に関連する 検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「価値観のゆらぎ」に関連する 検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「価値観のゆらぎ」に関連する 検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「価値観のゆらぎ」に関連する 検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「価値観のゆらぎ」に関連する 検索キーワードの変化・
+              </p>
+            </div>
+            <ul class="creative-search-content-2022__contents">
+              <li>
+                <div class="creative-search-content-2022__items-wrap">
+                  <p class="creative-search-content-2022__item">
+                    バーチャル空間
+                  </p>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <p class="creative-search-content-2022__date">
+                  検索頻度は約
+                  <span class="creative-search-content-2022__date-size">2</span>
+                  倍にUP !
+                </p>
+              </li>
+              <li>
+                <div class="creative-search-content-2022__items-wrap">
+                  <p class="creative-search-content-2022__item">脱炭素</p>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <p class="creative-search-content-2022__date">
+                  検索頻度は約
+                  <span class="creative-search-content-2022__date-size"
+                    >10</span
+                  >
+                  倍にUP !
+                </p>
+              </li>
+              <li>
+                <div class="creative-search-content-2022__items-wrap">
+                  <p class="creative-search-content-2022__item">ジェンダー</p>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <p class="creative-search-content-2022__date">
+                  検索頻度は約
+                  <span class="creative-search-content-2022__date-size">2</span>
+                  倍にUP !
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="creative-contents-more-2022">
+          <div class="creative-contents-more-2022__box">
+            <p class="creative-contents-more-2022__title">
+              「 価値観のゆらぎ 」の<br />
+              素材をもっと見ますか？
+            </p>
+
+            <p></p>
+            <div class="creative-contents-more-2022__button">
+              <a
+                class="creative-contents-more-2022__link-box"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p
+                  class="creative-contents-more-2022__link creative-contents-more-2022__link--theme"
+                >
+                  はい
+                </p>
+              </a>
+            </div>
+          </div>
+          <div id="anyone-creator"></div>
+          <div class="creative-contents-more-2022__sticker">
+            <img src="./public/img/theme/sticker-3.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="creative-background-2022 creative-background-2022--theme">
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--first"
+      >
+        <img src="./public/img/theme/sticker-1.svg" alt="" />
+      </div>
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--second"
+      >
+        <img src="public/img/theme/sticker-2.svg" alt="" />
+      </div>
+      <div class="creative-layout-2022">
+        <script>
+          $(function () {
+            $(window).on("scroll resize", function () {
+              var setHeight = 100;
+              var wHeight = $(window).height();
+              $(".creative-contents-wrap-2022__content").each(function () {
+                var scrollTop = $(window).scrollTop();
+                var targetPosition = $(this).offset().top;
+                if (scrollTop > targetPosition - wHeight + setHeight) {
+                  $(this).addClass("show");
+                }
+              });
+            });
+          });
+        </script>
+        <div class="creative-contents-wrap-2022">
+          <div
+            class="creative-images-content-2022 creative-images-content-2022--theme creative-contents-wrap-2022__content"
+          >
+            <p class="creative-images-content-2022__sub-title">
+              誰もがクリエイターになれる世界
+            </p>
+            <ul class="creative-slider-2022">
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/anyone-creator/anyone-creator-1.jpg"
+                  alt="誰もがクリエイターになれる世界の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/anyone-creator/anyone-creator-2.jpg"
+                  alt="誰もがクリエイターになれる世界の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/anyone-creator/anyone-creator-3.jpg"
+                  alt="誰もがクリエイターになれる世界の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/anyone-creator/anyone-creator-4.jpg"
+                  alt="誰もがクリエイターになれる世界の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/anyone-creator/anyone-creator-5.jpg"
+                  alt="誰もがクリエイターになれる世界の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/anyone-creator/anyone-creator-6.jpg"
+                  alt="誰もがクリエイターになれる世界の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/anyone-creator/anyone-creator-7.jpg"
+                  alt="誰もがクリエイターになれる世界の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/anyone-creator/anyone-creator-8.jpg"
+                  alt="誰もがクリエイターになれる世界の素材"
+                />
+              </li>
+            </ul>
+          </div>
+          <section
+            class="creative-text-content-2022 creative-contents-wrap-2022__content"
+          >
+            <h2 class="creative-text-content-2022__title">
+              誰もがクリエイターに<br />
+              なれる世界
+            </h2>
+            <p
+              class="creative-text-content-2022__text creative-text-content-2022__text--theme"
+            >
+              潤沢な在宅時間と創作ツールの発展を背景に、今まさに全人類総クリエイター時代に突入しています。<br />
+              完璧であることよりも、拙くとも、アイデアと行動力で評価される今、少しの勇気で誰もがクリエイターを名乗れるようになりました。
+              創作活動へのハードルの低さと、エンターテイメントと新たな刺激に飢えた寛容な人々の目によって、肩書を必要としない世界が到来しているのです。
+              小さな子からお年寄りまで、身近になったクリエイティブの世界を余すことなく表現してください。
+            </p>
+          </section>
+          <div
+            class="creative-search-content-2022 creative-search-content-2022--theme creative-contents-wrap-2022__content"
+          >
+            <div class="creative-search-content-2022__sub-title-wrap">
+              <p class="creative-search-content-2022__sub-title-text">
+                「誰もがクリエイターになれる世界」に関連する
+                検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「誰もがクリエイターになれる世界」に関連する
+                検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「誰もがクリエイターになれる世界」に関連する
+                検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「誰もがクリエイターになれる世界」に関連する
+                検索キーワードの変化・
+              </p>
+              <p class="creative-search-content-2022__sub-title-text">
+                「誰もがクリエイターになれる世界」に関連する
+                検索キーワードの変化・
+              </p>
+            </div>
+            <ul class="creative-search-content-2022__contents">
+              <li>
+                <div class="creative-search-content-2022__items-wrap">
+                  <p class="creative-search-content-2022__item">モノづくり</p>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <p class="creative-search-content-2022__date">
+                  検索頻度は約
+                  <span class="creative-search-content-2022__date-size">2</span>
+                  倍にUP !
+                </p>
+              </li>
+              <li>
+                <div class="creative-search-content-2022__items-wrap">
+                  <p class="creative-search-content-2022__item">画材</p>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <p class="creative-search-content-2022__date">
+                  検索頻度は約
+                  <span class="creative-search-content-2022__date-size">2</span>
+                  倍にUP !
+                </p>
+              </li>
+              <li>
+                <div class="creative-search-content-2022__items-wrap">
+                  <p class="creative-search-content-2022__item">YouTuber</p>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <p class="creative-search-content-2022__date">
+                  検索頻度は約
+                  <span class="creative-search-content-2022__date-size">2</span>
+                  倍にUP !
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="creative-contents-more-2022">
+          <div class="creative-contents-more-2022__box">
+            <p class="creative-contents-more-2022__title">
+              「 誰もがクリエイターになれる世界 」の<br />
+              素材をもっと見ますか？
+            </p>
+
+            <p></p>
+            <div class="creative-contents-more-2022__button">
+              <a
+                class="creative-contents-more-2022__link-box"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p
+                  class="creative-contents-more-2022__link creative-contents-more-2022__link--theme"
+                >
+                  はい
+                </p>
+              </a>
+            </div>
+          </div>
+          <div id="expression"></div>
+          <div id="manga-animation"></div>
+          <div class="creative-contents-more-2022__sticker">
+            <img src="./public/img/theme/sticker-3.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="creative-background-2022 creative-background-2022--expression">
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--first"
+      >
+        <img src="./public/img/expression/sticker-4.svg" alt="" />
+      </div>
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--second"
+      >
+        <img src="./public/img/expression/sticker-5.svg" alt="" />
+      </div>
+      <div class="creative-layout-2022">
+        <script>
+          $(function () {
+            $(window).on("scroll resize", function () {
+              var setHeight = 100;
+              var wHeight = $(window).height();
+              $(".creative-contents-wrap-2022__content").each(function () {
+                var scrollTop = $(window).scrollTop();
+                var targetPosition = $(this).offset().top;
+                if (scrollTop > targetPosition - wHeight + setHeight) {
+                  $(this).addClass("show");
+                }
+              });
+            });
+          });
+        </script>
+        <div class="creative-contents-wrap-2022">
+          <div
+            class="creative-images-content-2022 creative-images-content-2022--expression creative-contents-wrap-2022__content"
+            id="expression"
+          >
+            <p class="creative-images-content-2022__sub-title">漫画とアニメ</p>
+            <ul class="creative-slider-2022">
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/manga-animation/manga-animation-1.jpg"
+                  alt="漫画とアニメの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/manga-animation/manga-animation-2.jpg"
+                  alt="漫画とアニメの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/manga-animation/manga-animation-3.jpg"
+                  alt="漫画とアニメの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/manga-animation/manga-animation-4.jpg"
+                  alt="漫画とアニメの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/manga-animation/manga-animation-5.jpg"
+                  alt="漫画とアニメの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/manga-animation/manga-animation-6.jpg"
+                  alt="漫画とアニメの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/manga-animation/manga-animation-7.jpg"
+                  alt="漫画とアニメの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/manga-animation/manga-animation-8.jpg"
+                  alt="漫画とアニメの素材"
+                />
+              </li>
+            </ul>
+          </div>
+          <section
+            class="creative-text-content-2022 creative-contents-wrap-2022__content"
+          >
+            <h2 class="creative-text-content-2022__title">漫画とアニメ</h2>
+            <p
+              class="creative-text-content-2022__text creative-text-content-2022__text--expression"
+            >
+              リアリティは欲しい、でも「生々しいのはシンドイ」が本音。
+              重たい話ならなおさら、漫画やアニメで取り入れたい。多忙な現代人をさらに現実に引き戻す表現よりも、二次元でやわらかく表現してくれた方が、スッと受け入れられるのが今の時代。
+              漫画もアニメも一部のオタクな人のものではなく、伝えたい情報をわかりやすく、親しみと共感される手段として、注目されています。
+            </p>
+          </section>
+        </div>
+        <div class="creative-contents-more-2022">
+          <div class="creative-contents-more-2022__box">
+            <p class="creative-contents-more-2022__title">
+              「 漫画とアニメ 」の<br />
+              素材をもっと見ますか？
+            </p>
+
+            <p></p>
+            <div class="creative-contents-more-2022__button">
+              <a
+                class="creative-contents-more-2022__link-box"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p
+                  class="creative-contents-more-2022__link creative-contents-more-2022__link--expression"
+                >
+                  はい
+                </p>
+              </a>
+            </div>
+          </div>
+          <div id="impact"></div>
+          <div class="creative-contents-more-2022__sticker">
+            <img src="./public/img/expression/sticker-6.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="creative-background-2022 creative-background-2022--expression">
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--first"
+      >
+        <img src="./public/img/expression/sticker-4.svg" alt="" />
+      </div>
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--second"
+      >
+        <img src="./public/img/expression/sticker-5.svg" alt="" />
+      </div>
+      <div class="creative-layout-2022">
+        <script>
+          $(function () {
+            $(window).on("scroll resize", function () {
+              var setHeight = 100;
+              var wHeight = $(window).height();
+              $(".creative-contents-wrap-2022__content").each(function () {
+                var scrollTop = $(window).scrollTop();
+                var targetPosition = $(this).offset().top;
+                if (scrollTop > targetPosition - wHeight + setHeight) {
+                  $(this).addClass("show");
+                }
+              });
+            });
+          });
+        </script>
+        <div class="creative-contents-wrap-2022">
+          <div
+            class="creative-images-content-2022 creative-images-content-2022--expression creative-contents-wrap-2022__content"
+            id="expression"
+          >
+            <p class="creative-images-content-2022__sub-title">
+              インパクト勝負
+            </p>
+            <ul class="creative-slider-2022">
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/impact/impact-1.jpg"
+                  alt="インパクト勝負の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/impact/impact-2.jpg"
+                  alt="インパクト勝負の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/impact/impact-3.jpg"
+                  alt="インパクト勝負の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/impact/impact-4.jpg"
+                  alt="インパクト勝負の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/impact/impact-5.jpg"
+                  alt="インパクト勝負の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/impact/impact-6.jpg"
+                  alt="インパクト勝負の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/impact/impact-7.jpg"
+                  alt="インパクト勝負の素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/impact/impact-8.jpg"
+                  alt="インパクト勝負の素材"
+                />
+              </li>
+            </ul>
+          </div>
+          <section
+            class="creative-text-content-2022 creative-contents-wrap-2022__content"
+          >
+            <h2 class="creative-text-content-2022__title">インパクト勝負</h2>
+            <p
+              class="creative-text-content-2022__text creative-text-content-2022__text--expression"
+            >
+              広告も音楽もコンマ一秒を奪い合う時代の今、ビジュアル表現も「秒」の世界。<br />
+              一枚ですべてがわかる、一瞬で状況が伝わるわかりやすさ。<br />
+              目を奪わずにはいられない違和感ある表現や、強烈な色彩。時間の奪い合いの中で求められているのは「勝てる画像」です。いつもの作風にインパクトを詰め込んで。
+            </p>
+          </section>
+        </div>
+        <div class="creative-contents-more-2022">
+          <div class="creative-contents-more-2022__box">
+            <p class="creative-contents-more-2022__title">
+              「 インパクト勝負 」の<br />
+              素材をもっと見ますか？
+            </p>
+
+            <p></p>
+            <div class="creative-contents-more-2022__button">
+              <a
+                class="creative-contents-more-2022__link-box"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p
+                  class="creative-contents-more-2022__link creative-contents-more-2022__link--expression"
+                >
+                  はい
+                </p>
+              </a>
+            </div>
+          </div>
+          <div id="line"></div>
+          <div class="creative-contents-more-2022__sticker">
+            <img src="./public/img/expression/sticker-6.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="creative-background-2022 creative-background-2022--expression">
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--first"
+      >
+        <img src="./public/img/expression/sticker-4.svg" alt="" />
+      </div>
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--second"
+      >
+        <img src="./public/img/expression/sticker-5.svg" alt="" />
+      </div>
+      <div class="creative-layout-2022">
+        <script>
+          $(function () {
+            $(window).on("scroll resize", function () {
+              var setHeight = 100;
+              var wHeight = $(window).height();
+              $(".creative-contents-wrap-2022__content").each(function () {
+                var scrollTop = $(window).scrollTop();
+                var targetPosition = $(this).offset().top;
+                if (scrollTop > targetPosition - wHeight + setHeight) {
+                  $(this).addClass("show");
+                }
+              });
+            });
+          });
+        </script>
+        <div class="creative-contents-wrap-2022">
+          <div
+            class="creative-images-content-2022 creative-images-content-2022--expression creative-contents-wrap-2022__content"
+            id="expression"
+          >
+            <p class="creative-images-content-2022__sub-title">線を活かす</p>
+            <ul class="creative-slider-2022">
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/line/line-1.jpg"
+                  alt="線を活かすの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/line/line-2.jpg"
+                  alt="線を活かすの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/line/line-3.jpg"
+                  alt="線を活かすの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/line/line-4.jpg"
+                  alt="線を活かすの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/line/line-5.jpg"
+                  alt="線を活かすの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/line/line-6.jpg"
+                  alt="線を活かすの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/line/line-7.jpg"
+                  alt="線を活かすの素材"
+                />
+              </li>
+              <li>
+                <img
+                  class="creative-slider-2022__image"
+                  src="./public/img/line/line-8.jpg"
+                  alt="線を活かすの素材"
+                />
+              </li>
+            </ul>
+          </div>
+          <section
+            class="creative-text-content-2022 creative-contents-wrap-2022__content"
+          >
+            <h2 class="creative-text-content-2022__title">線を活かす</h2>
+            <p
+              class="creative-text-content-2022__text creative-text-content-2022__text--expression"
+            >
+              手書きのぬくもりは一定の需要を残しつつ、よりシンプルにミニマルになったイラスト表現は、次にわかりやすく強調されるようになり、そして今、再びデジタルへの回帰が見られ始めています。
+              どこか手書きっぽさを残しながら、デジタル的な直線や曲線を取り入れた表現は、図形の組み合わせにも似たデザイン思考が取り入れられています。
+              人肌感を抑えつつも、どこかやわらかさを残したデジタル特有の線を活かしたシンプルなイラスト表現が好まれています。
+            </p>
+          </section>
+        </div>
+        <div class="creative-contents-more-2022">
+          <div class="creative-contents-more-2022__box">
+            <p class="creative-contents-more-2022__title">
+              「 線を活かす 」の<br />
+              素材をもっと見ますか？
+            </p>
+
+            <p></p>
+            <div class="creative-contents-more-2022__button">
+              <a
+                class="creative-contents-more-2022__link-box"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p
+                  class="creative-contents-more-2022__link creative-contents-more-2022__link--expression"
+                >
+                  はい
+                </p>
+              </a>
+            </div>
+          </div>
+          <div id="comment"></div>
+          <div class="creative-contents-more-2022__sticker">
+            <img src="./public/img/expression/sticker-6.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="creative-background-2022 creative-background-2022--comments">
+      <div
+        class="creative-background-2022__sticker creative-background-2022__sticker--last"
+      >
+        <img src="./public/img/comments/sticker-8.svg" alt="" />
+      </div>
+      <div class="creative-layout-2022">
+        <div class="creative-contents-wrap-2022">
+          <div
+            class="creative-pixta-comment-2022 creative-contents-wrap-2022__content"
+          >
+            <div class="creative-pixta-comment-2022__sticker">
+              <img src="./public/img/comments/sticker-7.svg" alt="" />
+            </div>
+            <div class="creative-pixta-comment-2022__wrap">
+              <img
+                class="creative-pixta-comment-2022__image"
+                src="./public/img/comments/tsuiki-san.jpg"
+                alt=""
+              />
+              <div class="creative-pixta-comment-2022__name-wrap">
+                <p class="creative-pixta-comment-2022__name">筑城 俊</p>
+                <p class="creative-pixta-comment-2022__career">
+                  PIXTA事業本部 コンテンツ部<br />
+                  クリエイティブディレクター
+                </p>
+                <div class="creative-pixta-comment-2022__sns-wrap">
+                  <a
+                    class="creative-pixta-comment-2022__sns-link"
+                    href="https://twitter.com/tsuikishun?s=20"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    class="creative-pixta-comment-2022__sns-link"
+                    href="https://www.instagram.com/tsuikishun/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <p class="creative-pixta-comment-2022__text">
+              「トレンド」には時代の趨勢(すうせい)、つまり、これからどのようなありさまが顕在するかという展望も意味として内包されます。<br />
+              「クリエイティブトレンド」を発表させていただけることは、デジタルコンテンツをファインダーに社会の今と未来を見つめ続ける私たちの姿勢を体現するものであります。<br />
+              これもひとえに、PIXTAで自己表現をされるクリエイターの皆さまと、ご愛顧いただくユーザーの皆さまによって生まれる無数のビジュアルがあってのもので、この場を借りて御礼申し上げます。<br />
+              <br />
+              誰もが表現する術を持ち、ビジュアルの流通量が圧倒的に高まる中で、ビジュアルコミュニケーションには「上手い・きれい」を超えた「意味・共感力」の強さが問われています。<br />
+              ビジュアルトレンドは資本主義における市場活性の一要素として用いられることが多いですが、裏を返せば、「意味」を提示し社会の「共感」を十分得るに値する、数々の死線をくぐり抜けてきた(いく)クリエイティブとも言えます。<br />
+              そしてそのトレンドの発端は、小さな個の思想や信念であることも見逃せません。<br />
+              社会の今と未来を見つめ続ける中で、ビジュアルクリエイティブの根幹にあるそんな個の思想や信念が集積・拡散される場にPIXTAはなっていきたいですし、その一環として今回発表させていただいた7つの「クリエイティブトレンド」がより社会の共感を創造していくことを願っております。
+            </p>
+          </div>
+
+          <div
+            class="creative-guest-comment-2022 creative-contents-wrap-2022__content"
+          >
+            <div class="creative-guest-comment-2022__wrap">
+              <img class="creative-guest-comment-2022__image" src="./public/img/comments/uromi-san.jpg" alt="">
+              <div class="creative-guest-comment-2022__name-wrap">
+                <p class="creative-guest-comment-2022__name">
+                  うろみ | うざきひろみ
+                </p>
+                <p class="creative-guest-comment-2022__career">
+                  アートディレクター
+                </p>
+                <a
+                  class="creative-guest-comment-2022__sns-link"
+                  href="https://twitter.com/uromi_mottsu?s=20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <p class="creative-guest-comment-2022__text">
+              2021年はコロナにも慣れ、異常から日常へ変化した年だったと思います。<br />
+              年始にかけてまた爆発していくコロナの波にまた翻弄されていますが、翻弄されることにも個人的には慣れてきてしまった印象です。<br />
+              今はさまざまな変化を受け入れやすい状態になっているのかもしれません。今後、より幸せに生きるための変化をコロナをきっかけにどんどん進んでいけばいいなと感じています。<br />
+              <br />
+              その中でクリエイティブはどう変化していくのか、全然予想はつきませんが、私が大切にしていることなどをお話しできればと思います。
+            </p>
+          </div>
+
+          <div
+            class="creative-guest-profile-2022 creative-contents-wrap-2022__content"
+          >
+            <h2 class="creative-guest-profile-2022__title">プロフィール</h2>
+            <p class="creative-guest-profile-2022__text">
+              東京藝術大学デザイン科卒業後、電通に入社。<br />
+              デザイン制作だけでなく、全体の企画やブランディングなども行っています。<br />
+              色を使ったポップなデザインが得意です。<br />
+              <br />
+              <span class="creative-guest-profile-2022__text-sub-title"
+                >実績</span
+              ><br />
+              LuLuLun CLEANSING、ORGANICパッケージデザイン<br />
+              サン・マルコ食品「COROMORE」パッケージデザイン<br />
+              Yahoo!JAPAN「BOSAI DIVERSITY」<br />
+              KDDI「意識高すぎ高杉くん」シリーズ<br />
+              日清食品「ほぼイカ」「マキシマム ザ 輝夜月」<br />
+              KATE など<br />
+              <br />
+              <span class="creative-guest-profile-2022__text-sub-title"
+                >受賞歴</span
+              ><br />
+              Adfest DESIGN GOLD 受賞<br />
+              PR Awards asia GOLD 受賞<br />
+              CLIOAWARDS BRONZE 受賞<br />
+              GOOD DESIGN 2018 TOP100<br />
+              young cannes print 日本代表<br />
+              新聞クリエーティブ大賞優秀賞<br />
+              ACCギャラクシー賞CM部門優秀賞 など
+            </p>
+          </div>
+        </div>
+
+        <div id="event"></div>
+        <div class="creative-event-2022">
+          <p class="creative-event-2022__sub-title">Talk Event - Online</p>
+          <p class="creative-event-2022__title">
+            クリエイティブ業界人必見！<br />
+            2022年ビジュアルトレンド
+          </p>
+          <p class="creative-event-2022__text">
+            デザイナーをはじめ、ビジュアル表現を通じて世の中に発信する生業の人々を対象に「Creative
+            Trend 2022」を深掘りすると共に、
+            電通アートディレクターであるうろみ氏をゲストに迎え、2022年のクリエイティブに何が求められていくのかを考察し対談する無料オンラインイベントを開催します。
+          </p>
+          <div class="creative-event-2022__info-wrap creative-event-info-2022">
+            <div class="creative-event-info-2022__guest">
+              <img class="creative-event-info-2022__image" src="./public/img/comments/uromi-san.jpg" alt="">
+              <p class="creative-event-info-2022__name">
+                うろみ | うざきひろみ
+              </p>
+              <p class="creative-event-info-2022__career">アートディレクター</p>
+              <a class="creative-event-info-2022__sns-link" href="https://twitter.com/uromi_mottsu?s=20" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+            <ul class="creative-event-info-2022__list">
+              <li>
+                <p class="creative-event-info-2022__information">開催日</p>
+                <p class="creative-event-info-2022__detail">2022年3月9日(水)</p>
+              </li>
+              <li>
+                <p class="creative-event-info-2022__information">時間</p>
+                <p class="creative-event-info-2022__detail">20:00-21:30</p>
+              </li>
+              <li>
+                <p class="creative-event-info-2022__information">場所</p>
+                <p class="creative-event-info-2022__detail">zoom</p>
+                <p class="creative-event-info-2022__note">
+                  ※ 詳細は下記リンクから
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="creative-event-button-2022">
+          <div class="creative-event-button-2022__wrap">
+            <p class="creative-event-button-2022__text">
+              イベントに申し込みますか？
+            </p>
+            <a class="creative-event-button-2022__link" href="https://creative-trend2022.peatix.com/" target="_blank" rel="noopener noreferrer">見てみる</a>
+          </div>
+        </div>
+
+        <p class="creative-copy-right-2022">
+          2006 - Now (c) PIXTA Inc. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

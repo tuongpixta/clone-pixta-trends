@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+.creative-event-info-2022 {
+  &__list {
+    @include maxq(md) {
+      margin-bottom: 30px;
+    }
+
+    & > li {
+      display: flex;
+      align-items: center;
+    }
+
+    & > li:not(:last-child) {
+      margin-bottom: 20px;
+      @include maxq(md) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__information {
+    width: 70px;
+    margin-right: 20px;
+    padding: 10px;
+    text-align: center;
+    @include font-size(16);
+    color: $color-text;
+    border: 1px solid $color-outline;
+    @include maxq(md) {
+      padding: 5px;
+      @include font-size(14);
+    }
+  }
+
+  &__detail {
+    letter-spacing: 0.07em;
+    color: $color-text;
+    @include font-size(24);
+    font-weight: bold;
+    @include maxq(md) {
+      @include font-size(20);
+    }
+  }
+
+  &__note {
+    margin-left: 20px;
+    color: $color-text;
+    @include font-size(12);
+  }
+
+  &__guest {
+    text-align: center;
+    @include maxq(md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__image {
+    width: 120px;
+    margin-bottom: 10px;
+    border: 1px solid $color-outline;
+  }
+
+  &__name,
+  &__career {
+    color: $color-text;
+    font-weight: bold;
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    @include font-size(20);
+  }
+
+  &__career {
+    margin-bottom: 15px;
+  }
+
+  &__sns-link {
+    i {
+      @include font-size(18);
+      color: $color-text;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+.creative-contents-more-2022 {
+  width: 60%;
+  margin-left: 100px;
+  @include maxq(md) {
+    width: 100%;
+    margin: 0 auto 180px;
+  }
+
+  &__box {
+    padding: 40px 60px;
+    border: 1px solid $color-outline;
+    background-color: $color-base;
+    @include maxq(md) {
+      padding: 40px 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: bold;
+    @include font-size(24);
+    color: $color-text;
+    @include maxq(md) {
+      margin-bottom: 20px;
+      @include font-size(16);
+    }
+  }
+
+  &__button {
+    width: 80%;
+    margin: auto;
+  }
+
+  &__link-box {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__link {
+    padding: 10px 40px;
+    @include font-size(24);
+    color: $color-text;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid $color-outline;
+    @include maxq(md) {
+      padding: 5px 20px;
+      @include font-size(20);
+    }
+
+    &:hover {
+      color: $color-text;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    &--theme {
+      background-color: $color-accent-theme;
+
+      &:hover {
+        background-color: $color-shadow-theme;
+      }
+    }
+
+    &--expression {
+      background-color: $color-accent-expression;
+
+      &:hover {
+        background-color: $color-shadow-expression;
+      }
+    }
+  }
+
+  &__sticker {
+    width: 200px;
+    margin-top: -100px;
+    margin-left: 530px;
+    @include maxq(md) {
+      width: 90px;
+      margin: -270px 20px 0;
+    }
+  }
+}

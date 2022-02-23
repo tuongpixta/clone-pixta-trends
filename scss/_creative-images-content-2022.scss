@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.creative-images-content-2022 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 600px;
+  padding-bottom: 40px;
+  background-color: $color-base;
+  border: 1px solid $color-outline;
+  @include maxq(md) {
+    width: 100%;
+    height: auto;
+    margin-bottom: 80px;
+  }
+
+  &--theme {
+    box-shadow: 20px 20px $color-shadow-theme, 21px 21px $color-outline,
+      21px 19px $color-outline, 19px 21px $color-outline;
+    @include maxq(md) {
+      box-shadow: 10px 10px $color-shadow-theme, 11px 11px $color-outline,
+        11px 9px $color-outline, 9px 11px $color-outline;
+    }
+  }
+
+  &--expression {
+    box-shadow: 20px 20px $color-shadow-expression, 21px 21px $color-outline,
+      21px 19px $color-outline, 19px 21px $color-outline;
+    @include maxq(md) {
+      box-shadow: 10px 10px $color-shadow-expression, 11px 11px $color-outline,
+        11px 9px $color-outline, 9px 11px $color-outline;
+    }
+  }
+
+  &__sub-title {
+    padding: 10px;
+    color: $color-sub-title-text;
+    background-color: $color-sub-title-back;
+    @include font-size(15);
+  }
+}
